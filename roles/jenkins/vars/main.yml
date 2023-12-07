@@ -1,4 +1,4 @@
-pipeline_jobs:
+ci_pipeline_jobs:
   - { name: "frontend", dir: "CIPipelines" }
   - { name: "catalogue", dir: "CIPipelines" }
   - { name: "user", dir: "CIPipelines" }
@@ -6,5 +6,10 @@ pipeline_jobs:
   - { name: "shipping", dir: "CIPipelines" }
   - { name: "payment", dir: "CIPipelines" }
 
+sbranch_pipeline_jobs:
+  - { name: "robosho-infra", dir: "Infra" }
+
+
 folders:
   - CIPipelines
+  - Infra

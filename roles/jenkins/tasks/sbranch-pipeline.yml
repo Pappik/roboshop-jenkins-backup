@@ -1,11 +1,11 @@
-- name: copy xml file to location
+- name: copy config to location
   ansible.builtin.template:
-    src: job.xml
-    dest: /tmp/job.xml
+    src: s-job.xml
+    dest: /tmp/s-job.xml
 
 - name: Create a {{item.name}} job
   community.general.jenkins_job:
-    config: "{{ lookup('file', '/tmp/job.xml') }}"
+    config: "{{ lookup('file', '/tmp/s-job.xml') }}"
     name: "{{item.dir}}/{{item.name}}"
     password: "{{jenkins_password}}"
     url: http://172.31.36.116:8080
