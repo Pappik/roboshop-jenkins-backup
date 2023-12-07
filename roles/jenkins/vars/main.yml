@@ -7,7 +7,7 @@ ci_pipeline_jobs:
   - { name: "payment", dir: "CIPipelines" }
 
 sbranch_pipeline_jobs:
-  - { name: "robosho-infra", dir: "Infra" }
+  - { name: "roboshop-infra", dir: "Infra" }
 
 
 folders:
